@@ -36,7 +36,7 @@ This VHDL module implements a simple, full-duplex UART. It does not perform over
 
 **How It Works**
 - **Transmit**:  
-  The module latches `data_to_send` at the start bit, then sends each data bit in sequence. If parity is enabled, it sends the parity bit next, then the configured stop bits. The `data_to_send` signal must be asserted for the entire first baud tick period.
+  The module latches `data_to_send` at the start bit, then sends each data bit in sequence. If parity is enabled, it sends the parity bit next, then the configured stop bits. The `data_to_send` signal must be asserted for the entire first baud tick period. Once the transmission starts, the data to send gets latched. 
 - **Receive**:  
   On detecting a low start bit, it samples bits at the baud rate. After collecting `N_data` bits (and parity if enabled), it checks stop bits to detect framing errors.
 
