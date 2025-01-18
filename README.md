@@ -1,6 +1,5 @@
 # UART (Universal Asynchronous Receiver/Transmitter)
 
-**File Name:** UART.vhd  
 **Author:** Jean-Stephane Cote  
 **Date:** 2025-01-05  
 **Version:** 1.0  
